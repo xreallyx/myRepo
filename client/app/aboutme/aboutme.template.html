@@ -1,0 +1,69 @@
+Try
+
+<!--Card -->
+
+<md-content id="mdset" class="md-padding" layout="row" layout-wrap layout-align="center center">
+<!--Fab button -->
+<md-fab-speed-dial md-direction="down" class="md-scale">
+
+  <md-fab-trigger>
+    <md-button aria-label="menu" class="md-fab md-primary">
+      <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+    </md-button>
+  </md-fab-trigger>
+
+  <md-fab-actions>       
+
+    <md-button href="https://www.facebook.com/roberto.valenti.520" aria-label="Facebook" class="md-fab md-raised md-mini">
+      <md-icon md-svg-src="img/icons/facebook.svg"  aria-label="Facebook"></md-icon>
+    </md-button>  
+
+    <md-button href="https://www.linkedin.com/profile/view?id=ADEAABORa6UB_ML2nY0e0VfDzqUxLaH1Ohfw8Ew&authType=NAME_SEARCH&authToken=D9dY&locale=it_IT&srchid=3282973811448562180442&srchindex=1&srchtotal=58&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A3282973811448562180442%2CVSRPtargetId%3A328297381%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Atrue%2CauthType%3ANAME_SEARCH" aria-label="Linkedin" class="md-fab md-raised md-mini">
+      <md-icon md-svg-src="img/icons/linkedin.svg" aria-label="Linkedin"></md-icon>
+    </md-button>  
+    <md-button aria-label="Mail" class="md-fab md-raised md-mini">
+      <md-icon md-svg-src="img/icons/mail.svg" aria-label="Mail"></md-icon>
+    </md-button>
+    <md-button aria-label="Skype" class="md-fab md-raised md-mini">
+      <md-icon md-svg-src="img/icons/skype.svg" aria-label="Skype"></md-icon>
+    </md-button>     
+  </md-fab-actions> 
+</md-fab-speed-dial>
+
+  <div flex="35" layout="column">
+
+    <md-card id="pset"class="md-whiteframe-1dp">
+      <img id="photo" ng-src="img/FTesseraBestShp_render.png" class="md-card-image" alt="Washed Out" />
+
+      <md-card-title>
+      <md-card-title-text>
+        <span id="cit" class="md-headline">Web Developer - Full Stack Mean Passionate</span>
+        <span id="subcit" class="md-subhead">"Practice makes the master"</span>
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-lg card-media"></div>
+      </md-card-title-media>
+      </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="show = !show" class="md-raised md-primary">My Life</md-button>
+       
+      </md-card-actions>
+    </md-card>
+  </div>
+
+<!--Button -->
+
+  <md-whiteframe class="md-whiteframe-10dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+    <div class="description directiveAboutme" ng-show="show">
+      <strong>Roberto Valenti</strong> was born in Palermo(Italy) , on 1986.
+      Since he was young , he was attracted by the <strong>information tecnology world</strong>.
+      in 2005 he took an <strong>IT diploma</strong>.
+      After that , he traveled around Europe , to made life and work experiences.
+      In the 2015 , he went to Ancona , to take part to a </strong>Web Development Master</strong> to become a <strong>Pro Web Developer</strong>.
+      There he improved his skills, learning hight level developing languanges and frameworks, like <strong>AngularJs</strong> and <strong>Swift</strong>.
+    </div>
+  </md-whiteframe>
+
+</md-content>
+
+

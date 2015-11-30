@@ -1,0 +1,13 @@
+{
+  "name": "artoo-campus",
+  "version": "1.0",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.5",
+    "angular-ui": "~0.4.0",
+    "angular-material": "~0.11.4",
+    "angular-resource": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "font-awesome": "~4.5.0"
+  }
+}
