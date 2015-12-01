@@ -1,4 +1,6 @@
 ".container": {
 	backgroundColor:"#DDD",
+	backgroundImage:"/images/wallpaper.png",
 }
+
 
