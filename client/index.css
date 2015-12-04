@@ -13,11 +13,14 @@
   margin-right: auto; }
 
 
+
 .white{
   background-color: white;
   border-radius: 0 20px 0 20px;
 
+
 }
+
 .skillph{
   font-size: 35px;
   font-family: 'Luckiest Guy', cursive;
@@ -81,7 +84,7 @@
   width: 90px;
 }
 
-#mdset{
+.mdset{
 	background-color: transparent;
  
 }
@@ -103,11 +106,19 @@
   font-size: 25px;
 }
 
-#pset{
+.pset{
   border-radius: 0 20px 0 20px;
   background-image: url('img/wallpapercardm.png');
   background-color: #F2F2F2;
   border:1px solid #FFF;
+  
+}
+.psetcont{
+  border-radius: 0 20px 0 20px;
+  background-color: #F2F2F2;
+  border:1px solid #FFF;
+  padding: 20px;
+
   
 }
 #subcit{

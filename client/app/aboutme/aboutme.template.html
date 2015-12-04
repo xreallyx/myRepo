@@ -1,8 +1,8 @@
-Try
+
 
 <!--Card -->
 
-<md-content id="mdset" class="md-padding" layout="row" layout-wrap layout-align="center center">
+<md-content class="mdset md-padding" layout="row" layout-wrap layout-align="center center">
 <!--Fab button -->
 <md-fab-speed-dial md-direction="down" class="md-scale">
 
@@ -32,7 +32,7 @@ Try
 
   <div flex="35" layout="column">
 
-    <md-card id="pset"class="md-whiteframe-1dp">
+    <md-card class="pset md-whiteframe-1dp">
       <img id="photo" ng-src="img/FTesseraBestShp_render.png" class="md-card-image" alt="Washed Out" />
 
       <md-card-title>
@@ -45,8 +45,8 @@ Try
       </md-card-title-media>
       </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-        <md-button ng-click="show = !show" class="md-raised md-primary">My Life</md-button>
-       
+        <md-button ng-model="boolLife" ng-init="boolLife = false" ng-click="showLife(boolLife)" class="md-raised md-primary">My Life</md-button>
+        <md-button  ng-model="boolSkills" ng-init="boolSkills = false" ng-click="showSkills(boolSkills)" class="md-raised md-primary">My Skills</md-button>
       </md-card-actions>
     </md-card>
   </div>
@@ -54,13 +54,20 @@ Try
 <!--Button -->
 
   <md-whiteframe class="md-whiteframe-10dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
-    <div class="description directiveAboutme" ng-show="show">
+    <div class="description directiveAboutme"  ng-show="boolLife">
       <strong>Roberto Valenti</strong> was born in Palermo(Italy) , on 1986.
       Since he was young , he was attracted by the <strong>information tecnology world</strong>.
       in 2005 he took an <strong>IT diploma</strong>.
       After that , he traveled around Europe , to made life and work experiences.
       In the 2015 , he went to Ancona , to take part to a </strong>Web Development Master</strong> to become a <strong>Pro Web Developer</strong>.
       There he improved his skills, learning hight level developing languanges and frameworks, like <strong>AngularJs</strong> and <strong>Swift</strong>.
+    </div>
+    <div class="description directiveAboutme"ng-show="boolSkills">
+      HTML CSS <strong>Javascript</strong> PHP
+      Jquery <strong>AngularJs</strong>
+      <strong>NodeJs</strong> <strong>MongoDB</strong> MySql
+      Bootstrap Git Agile UxDesign 
+      IOS <strong>Android</strong>
     </div>
   </md-whiteframe>
 
