@@ -10,10 +10,10 @@ angular.module('roberto')
 		controller: 'AboutmeCtrl'
 	})
 
-	.state('portfolio',{
+/*	.state('portfolio',{
 		url:'/portfolio',
 		templateUrl:'app/portfolio/portfolio.template.html'
-	})
+	}) */
 	.state('contacts',{
 		url:'/contacts',
 		templateUrl:'app/contacts/contacts.template.html',

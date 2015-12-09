@@ -9,8 +9,9 @@ var add = function(req,res){
 	console.log(data);
 	data.save().then(
 		function(){
-			console.log("miao2");
+			console.log("I'm inside then in add");
 			res.status(200).send("Data saved!");
+
 
 		}).catch(
 		function(err){

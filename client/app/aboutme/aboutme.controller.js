@@ -8,7 +8,6 @@
       this.selectedMode = 'md-fling';
       this.availableDirections = ['up', 'down', 'left', 'right'];
       this.selectedDirection = 'up';
-
       
  
 
@@ -35,4 +34,13 @@
 
       };
 
+  /*    $scope.showToast = function(flag){
+      
+      setTimeout(function(){  
+      
+      flag = !flag;
+      console.log(flag);
+      }, 1000);           
+      };
+  */    
     });

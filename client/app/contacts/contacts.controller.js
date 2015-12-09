@@ -7,6 +7,7 @@ $scope.send = function(user){
     ).then(
         function(){
         console.log("i dati sono stati salvati sul DB");
+        alert('Your request was successful!');
     }
     ).catch(         
         function(){

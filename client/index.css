@@ -25,7 +25,7 @@
   font-size: 35px;
   font-family: 'Luckiest Guy', cursive;
   text-align: center;
-  color:#FF5722;
+  color:;
   background-color: #F2F2F2;
 }
 #android{
@@ -126,9 +126,13 @@
   background-color: #9B8989;
   display: block;
 }
-#title{
-  font-weight:bold;
+.title{
+ 
   text-align:center;
+  font-family: 'Luckiest Guy', cursive;
+  color:black;
+  background-color: white;
+
 }
 
 

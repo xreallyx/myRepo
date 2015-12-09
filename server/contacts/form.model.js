@@ -4,7 +4,7 @@ var formSchema = new Schema({     //initialize a new model
   name: String,
   phone: String,
   email: String,
-  address: String,
+  message: String,
   
 });
 

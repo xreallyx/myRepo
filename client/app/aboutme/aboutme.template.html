@@ -2,7 +2,7 @@
 
 <!--Card -->
 
-<md-content class="mdset md-padding" layout="row" layout-wrap layout-align="center center">
+<md-content class="mdset md-padding" layout="row" layout-wrap layout-align="top center">
 <!--Fab button -->
 <md-fab-speed-dial md-direction="down" class="md-scale">
 
@@ -14,19 +14,13 @@
 
   <md-fab-actions>       
 
-    <md-button href="https://www.facebook.com/roberto.valenti.520" aria-label="Facebook" class="md-fab md-raised md-mini">
-      <md-icon md-svg-src="img/icons/facebook.svg"  aria-label="Facebook"></md-icon>
+    <md-button href="https://github.com/xreallyx/myRepo" aria-label="GitHub" class="md-fab md-raised md-mini">
+      <md-icon md-svg-src="img/icons/GitHub_Mark.svg"  aria-label="GitHub"></md-icon>
     </md-button>  
 
     <md-button href="https://www.linkedin.com/profile/view?id=ADEAABORa6UB_ML2nY0e0VfDzqUxLaH1Ohfw8Ew&authType=NAME_SEARCH&authToken=D9dY&locale=it_IT&srchid=3282973811448562180442&srchindex=1&srchtotal=58&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A3282973811448562180442%2CVSRPtargetId%3A328297381%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Atrue%2CauthType%3ANAME_SEARCH" aria-label="Linkedin" class="md-fab md-raised md-mini">
       <md-icon md-svg-src="img/icons/linkedin.svg" aria-label="Linkedin"></md-icon>
-    </md-button>  
-    <md-button aria-label="Mail" class="md-fab md-raised md-mini">
-      <md-icon md-svg-src="img/icons/mail.svg" aria-label="Mail"></md-icon>
-    </md-button>
-    <md-button aria-label="Skype" class="md-fab md-raised md-mini">
-      <md-icon md-svg-src="img/icons/skype.svg" aria-label="Skype"></md-icon>
-    </md-button>     
+    </md-button>      
   </md-fab-actions> 
 </md-fab-speed-dial>
 
@@ -44,7 +38,7 @@
         <div class="md-media-lg card-media"></div>
       </md-card-title-media>
       </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
+        <md-card-actions layout="row" layout-align="center center">
         <md-button ng-model="boolLife" ng-init="boolLife = false" ng-click="showLife(boolLife)" class="md-raised md-primary">My Life</md-button>
         <md-button  ng-model="boolSkills" ng-init="boolSkills = false" ng-click="showSkills(boolSkills)" class="md-raised md-primary">My Skills</md-button>
       </md-card-actions>
@@ -55,7 +49,7 @@
 
   <md-whiteframe class="md-whiteframe-10dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
     <div class="description directiveAboutme"  ng-show="boolLife">
-      <strong>Roberto Valenti</strong> was born in Palermo(Italy) , on 1986.
+      <strong>Roberto Valenti</strong> was born in Palermo(Italy) , in 1986.
       Since he was young , he was attracted by the <strong>information tecnology world</strong>.
       in 2005 he took an <strong>IT diploma</strong>.
       After that , he traveled around Europe , to made life and work experiences.
@@ -72,5 +66,11 @@
   </md-whiteframe>
 
 </md-content>
+
+
+
+<md-toast ng-model="flag" ng-init=" flag = false" ng-show="showToast(flag)">
+  <span flex>Custom toast!</span>
+</md-toast>
 
 
