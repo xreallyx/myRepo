@@ -17,6 +17,17 @@ angular.module('roberto')
 	.state('contacts',{
 		url:'/contacts',
 		templateUrl:'app/contacts/contacts.template.html',
-		controller: 'ContactsCtrl'
+		controller: 'ContactsCtrl',
+		resolve:{
+			cirleRun: function($timeout, $state){
+				return $timeout(function(){
+					console.log("i'm in the resolve");
+				},1500)
+			}
+		},
+		onEnter: function(cirleRun){
+			console.log("i'm in the on enter");
+
+		},
 	})
 });

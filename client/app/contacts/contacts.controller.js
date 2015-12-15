@@ -2,6 +2,7 @@ angular.module('roberto').controller('ContactsCtrl', function($scope, GeneralSrv
 	   
 $scope.GeneralSrv = GeneralSrv;
 
+
 $scope.send = function(user){
     GeneralSrv.save(user
     ).then(

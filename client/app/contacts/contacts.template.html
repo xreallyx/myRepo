@@ -1,3 +1,7 @@
+<!-- on enter -->
+<!-- <md-progress-linear id="progss"md-mode="determinate"></md-progress-linear> -->
+
+
 <p class="title">Here you can sand me a message!</p>
 
 <form novalidate name="registrationForm" class="simple-form" ng-submit="send(user)">
@@ -19,7 +23,7 @@
     <md-input-container class="md-icon-float md-block" >
       <label>*Email</label>
       <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
-      <input ng-model="user.email" type="email" ng-pattern="^[A-Za-z0-9._-]+@[[A-Za-z0-9.-]+$" required />
+      <input ng-model="user.email" type="email" ng-pattern="/^[A-Za-z0-9._-]+@[[A-Za-z0-9.-]+$/" required />
     </md-input-container>
     
     <md-input-container  class="md-icon-float md-block" >

@@ -1,7 +1,7 @@
 angular.module("roberto").factory('GeneralSrv',function($resource){
 	//business logic
 	var flag = 0;
-	
+
 	var Data = $resource('/api/contacts/:action/:code', {
     action: '@action',
     code: '@code',
@@ -25,10 +25,14 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 			}
 		})
 	};
+
+
+
 	//public api
 	return{
 		save:save,	
 		timeFunc:timeFunc,
+		
 	}
 }); 
 	

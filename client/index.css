@@ -11,16 +11,27 @@
   height: 300px;
   margin-left: auto;
   margin-right: auto; }
-
-
-
+.mdset{
+  background-color: transparent;
+}
+.pset{
+  border-radius: 0 20px 0 20px;
+  background-image: url('img/wallpapercardm.png');
+  background-color: #F2F2F2;
+  border:1px solid #FFF;
+  
+}
+.psetcont{
+  border-radius: 0 20px 0 20px;
+  background-color: #F2F2F2;
+  border:1px solid #FFF;
+  padding: 20px;  
+}
 .white{
   background-color: white;
   border-radius: 0 20px 0 20px;
 
-
 }
-
 .skillph{
   font-size: 35px;
   font-family: 'Luckiest Guy', cursive;
@@ -28,11 +39,11 @@
   color:;
   background-color: #F2F2F2;
 }
-#android{
-  font-size: 70px;
-}
-#angular{
-  font-size: 90px;
+.title{
+  text-align:center;
+  font-family: 'Luckiest Guy', cursive;
+  color:black;
+  background-color: white;
 }
 
 #bg{
@@ -48,26 +59,6 @@
   display: block;
   font-size: 15pt;
 }
-#css{
-  font-size: 25px;
-}
-#express{
-  font-size: 60px;
-}
-#html{
-  font-size: 45px;
-}
-#ios{
-  font-size: 50px;
-}
-#js{
-  font-size:90px;
-   
-}
-#jquery{
-  font-size:50px;
-   
-}
 #logo{
   width:30px;
 }
@@ -80,67 +71,20 @@
 #logofhc{
   width:120px;
 }
-#logojs{
-  width: 90px;
-}
-
-.mdset{
-	background-color: transparent;
- 
-}
-#mongo{
-  font-size: 50px;
-}
-
-#node{
-  font-size: 60px;
-}
-#node img{
-  width:70px;
-
-}
 #photo{
     width:120px;
-}
-#php{
-  font-size: 25px;
-}
-
-.pset{
-  border-radius: 0 20px 0 20px;
-  background-image: url('img/wallpapercardm.png');
-  background-color: #F2F2F2;
-  border:1px solid #FFF;
-  
-}
-.psetcont{
-  border-radius: 0 20px 0 20px;
-  background-color: #F2F2F2;
-  border:1px solid #FFF;
-  padding: 20px;
-
-  
 }
 #subcit{
   text-align: center;
   background-color: #9B8989;
   display: block;
 }
-.title{
- 
-  text-align:center;
-  font-family: 'Luckiest Guy', cursive;
-  color:black;
-  background-color: white;
-
-}
-#toast{
-  
+#toast{ 
   position:fixed;
   text-align: center;  
   top: 16px; 
   z-index: 0;
-
+  border:2px solid white;
 }
 
 
