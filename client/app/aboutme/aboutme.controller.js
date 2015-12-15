@@ -1,6 +1,6 @@
 
   angular.module('roberto')
-    .controller('AboutmeCtrl', function($scope) {
+    .controller('AboutmeCtrl', function($scope, GeneralSrv) {
       this.topDirections = ['left', 'up'];
       this.bottomDirections = ['down', 'right'];
       this.isOpen = false;
@@ -9,7 +9,7 @@
       this.availableDirections = ['up', 'down', 'left', 'right'];
       this.selectedDirection = 'up';
       
- 
+      $scope.GeneralSrv = GeneralSrv;
 
       $scope.showLife = function(bool){
         if(bool == false)
@@ -31,16 +31,6 @@
           $scope.boolSkills = false;
 
         }
-
       };
-
-  /*    $scope.showToast = function(flag){
       
-      setTimeout(function(){  
-      
-      flag = !flag;
-      console.log(flag);
-      }, 1000);           
-      };
-  */    
-    });
+     });

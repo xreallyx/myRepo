@@ -134,5 +134,13 @@
   background-color: white;
 
 }
+#toast{
+  
+  position:fixed;
+  text-align: center;  
+  top: 16px; 
+  z-index: 0;
+
+}
 
 

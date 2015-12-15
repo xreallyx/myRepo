@@ -7,7 +7,7 @@
 <md-fab-speed-dial md-direction="down" class="md-scale">
 
   <md-fab-trigger>
-    <md-button aria-label="menu" class="md-fab md-primary">
+    <md-button aria-label="menu" id="menu" class="md-fab md-primary" >
       <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
     </md-button>
   </md-fab-trigger>
@@ -65,12 +65,15 @@
     </div>
   </md-whiteframe>
 
-</md-content>
+  <md-toast id="toast" ng-hide="GeneralSrv.timeFunc()">Thank you for watching!</md-toast>
 
 
 
-<md-toast ng-model="flag" ng-init=" flag = false" ng-show="showToast(flag)">
-  <span flex>Custom toast!</span>
-</md-toast>
+
+
+
+
+
+
 
 

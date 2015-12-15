@@ -2,7 +2,8 @@ angular.module('roberto', [
   'ngResource',
   'ngMaterial',
   'ui.router',
-  'ngAnimate'
+  'ngAnimate',
+  
 ])
 .config(function($mdThemingProvider){
 	$mdThemingProvider.theme('default')
@@ -11,4 +12,4 @@ angular.module('roberto', [
 	.warnPalette('red')
 	.backgroundPalette('grey');
 	
-});
+})

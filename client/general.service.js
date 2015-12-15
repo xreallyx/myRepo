@@ -11,9 +11,23 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 			return callback();
 		}).$promise;
 	};
+
+	var timeFunc = function(flag){
+	//	console.log("yes");
+	//	setTimeout(function() {				
+	//	flag = !flag;	
+	//	console.log(flag);	
+	//	return flag;	
+	//	}, 2000);
+	$(document).ready(function(){
+		
+		setTimeout(function() {$("#toast").animate({"top":"96px"});}, 500);
+	})
+	};
 	//public api
 	return{
-		save:save,
+		save:save,	
+		timeFunc:timeFunc,
 	}
 }); 
 	
