@@ -13,15 +13,18 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	};
 
 	var timeFunc = function(flag){
-	//	console.log("yes");
-	//	setTimeout(function() {				
-	//	flag = !flag;	
-	//	console.log(flag);	
-	//	return flag;	
-	//	}, 2000);
+
 	$(document).ready(function(){
-		
-		setTimeout(function() {$("#toast").animate({"top":"96px"});}, 500);
+	console.log(flag);
+	if(flag == 1){
+		angular.noop;
+	}else{
+
+		setTimeout(function() {$("#toast").animate({"top":"96px"},500);}, 500);
+		setTimeout(function() {$("#toast").animate({"top":"-96px"},1500);}, 2000);
+		flag = 1;
+	}
+
 	})
 	};
 	//public api

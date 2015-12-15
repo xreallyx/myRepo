@@ -7,7 +7,7 @@
 <md-fab-speed-dial md-direction="down" class="md-scale">
 
   <md-fab-trigger>
-    <md-button aria-label="menu" id="menu" class="md-fab md-primary" >
+    <md-button aria-label="menu" id="menu" class="md-fab md-primary" ng-click="GeneralSrv.timeFunc(flag)">
       <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
     </md-button>
   </md-fab-trigger>
@@ -65,7 +65,9 @@
     </div>
   </md-whiteframe>
 
-  <md-toast id="toast" ng-hide="GeneralSrv.timeFunc()">Thank you for watching!</md-toast>
+  <md-toast id="toast" ng-model="flag" ng-init="flag = 0">Thank you for watching!</md-toast>
+
+</md-content>
 
 
 
