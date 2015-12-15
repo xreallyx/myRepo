@@ -1,5 +1,7 @@
 angular.module("roberto").factory('GeneralSrv',function($resource){
 	//business logic
+	var flag = 0;
+	
 	var Data = $resource('/api/contacts/:action/:code', {
     action: '@action',
     code: '@code',
@@ -12,20 +14,16 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		}).$promise;
 	};
 
-	var timeFunc = function(flag){
-
-	$(document).ready(function(){
-	console.log(flag);
-	if(flag == 1){
-		angular.noop;
-	}else{
-
-		setTimeout(function() {$("#toast").animate({"top":"96px"},500);}, 500);
-		setTimeout(function() {$("#toast").animate({"top":"-96px"},1500);}, 2000);
-		flag = 1;
-	}
-
-	})
+	var timeFunc = function(){
+		$(document).ready(function(){
+			if(flag == 1){
+				angular.noop;
+			}else{
+				setTimeout(function() {$("#toast").animate({"top":"96px"},500);}, 500);
+				setTimeout(function() {$("#toast").animate({"top":"-96px"},1500);}, 2000);
+				flag = 1;
+			}
+		})
 	};
 	//public api
 	return{
