@@ -1,90 +1,17 @@
-.fabSpeedDialdemoBasicUsage .text-capitalize {
-  text-transform: capitalize; }
-.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
-  background-color: #000 !important; }
-.fabSpeedDialdemoBasicUsage p.note {
-  font-size: 1.2rem; }
-.fabSpeedDialdemoBasicUsage .lock-size {
-  min-width: 300px;
-  min-height: 300px;
-  width: 300px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto; }
+.form-control.ng-dirty.ng-invalid{
+    border-color: red;
+    box-shadow: inset  1px 1px red;
+}
+.form-control.ng-dirty.ng-valid{
+    border-color: green;
+    box-shadow: inset  1px 1px green;
+}
 .mdset{
-  background-color: transparent;
-}
-.pset{
-  border-radius: 0 20px 0 20px;
-  background-image: url('img/wallpapercardm.png');
-  background-color: #F2F2F2;
-  border:1px solid #FFF;
-  
-}
-.psetcont{
-  border-radius: 0 20px 0 20px;
-  background-color: #F2F2F2;
-  border:1px solid #FFF;
-  padding: 20px;  
-}
-.white{
-  background-color: white;
-  border-radius: 0 20px 0 20px;
-
-}
-.skillph{
-  font-size: 35px;
-  font-family: 'Luckiest Guy', cursive;
-  text-align: center;
-  color:;
-  background-color: #F2F2F2;
+    border-top:2px solid grey;
+    border-bottom:2px solid grey;
+    padding: 10px;
 }
 .title{
-  text-align:center;
-  font-family: 'Luckiest Guy', cursive;
-  color:black;
-  background-color: white;
+    font-size:2em;
+    text-align:center;
 }
-
-#bg{
-  background-image: url("img/angular-bg-1.png");
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-
-}
-#cit{
-  text-align: center;
-  background: #724446;
-  display: block;
-  font-size: 15pt;
-}
-#logo{
-  width:30px;
-}
-#logobg{
-  width:200px;
-}
-#logobgfa{
-  width: 400px;
-}
-#logofhc{
-  width:120px;
-}
-#photo{
-    width:120px;
-}
-#subcit{
-  text-align: center;
-  background-color: #9B8989;
-  display: block;
-}
-#toast{ 
-  position:fixed;
-  text-align: center;  
-  top: 16px; 
-  z-index: 0;
-  border:2px solid white;
-}
-
-

@@ -1,10 +1,9 @@
-angular.module('roberto').controller('ContactsCtrl', function($scope, GeneralSrv){
-	   
-$scope.GeneralSrv = GeneralSrv;
-
-
-$scope.send = function(user){
-    GeneralSrv.save(user
+angular.module('roberto').controller('HomeCtrl', function($scope, GeneralSrv) {
+    
+   $scope.GeneralSrv = GeneralSrv;
+   
+$scope.send = function(weapon){
+    GeneralSrv.weapon(weapon
     ).then(
         function(){
         console.log("i dati sono stati salvati sul DB");
@@ -14,6 +13,7 @@ $scope.send = function(user){
         function(){
         console.log("ERROR!");
     }
-    )
+    );
 	};
+    
 });

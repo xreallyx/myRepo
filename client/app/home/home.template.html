@@ -1,0 +1,34 @@
+
+<p class="title">Insert your weapon!</p>
+
+<div layout="column" ng-cloak>
+  <md-content class="md-padding" layout="row" layout-wrap layout-align="center center">
+      
+    
+    <form novalidate name="inputForm" class="mdset simple-form" ng-submit="send(weapon)">
+      <md-input-container class="md-block">
+        <label>Name</label>
+       <input id="name" class="form-control" name="name" ng-model="weapon.name" />
+
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>Description</label>
+       <input id="description" class="form-control" name="description" type="text" ng-model="weapon.description" />
+      </md-input-container>
+      
+            </md-input-container>
+      <md-input-container class="md-block">
+        <label>Image URL</label>
+       <input id="image" class="form-control" name="image" type="text" ng-model="weapon.image" />
+      </md-input-container>
+      
+            </md-input-container>
+      <md-input-container class="md-block">
+        <label>Availability</label>
+       <input id="availability" class="form-control" name="availability" type="text" ng-model="weapon.availability" />
+      </md-input-container>
+     
+     
+    </form>
+  </md-content>
+</div>

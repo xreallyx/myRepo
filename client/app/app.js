@@ -7,7 +7,7 @@ angular.module('roberto', [
 ])
 .config(function($mdThemingProvider){
 	$mdThemingProvider.theme('default')
-	.primaryPalette('deep-orange')
+	.primaryPalette('blue')
 	.accentPalette('cyan')
 	.warnPalette('red')
 	.backgroundPalette('grey');
