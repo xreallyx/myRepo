@@ -1,1 +1,22 @@
-this is the list!
+<p class="title">Search your weapon!</p>
+<div layout="column" ng-cloak>  
+    <md-content class="md-padding" layout="row" layout-wrap layout-align="center center">
+    
+        <md-input-container class="md-block">
+            <label>Insert weapon's name</label>
+            <input id="vsearch" class="form-control" name="vsearch" type="text" />
+        </md-input-container>
+             
+        <div layout="row">
+            <md-button class="md-primary md-raised" ng-click="fsearch()">Search</md-button>
+        </div>
+  
+    </md-content>
+</div>
+
+<div layout-padding class="weapon" ng-repeat="weapon in weapons">
+  <h4 ng-bind="weapon.name"></h4>
+  <img style="display:block;max-width:10%;margin:20px auto;" ng-src="{{weapon.image}}" alt="{{weapon.name}}">
+  <p ng-bind="weapon.description"></p>
+</div> 
+

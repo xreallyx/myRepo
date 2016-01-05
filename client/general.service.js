@@ -16,12 +16,26 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		}).$promise;
 	};
 
+	
+	var get = function(params, callback){
+		callback = callback || angular.noop;
+		
+		return Data.get(params, function(weapon){
+			console.log(weapon);
+			return callback(weapon);	
+		}, function(err){
+			return callback(err);	
+		
+		}).$promise;
+	};
+
 
 
 	//public api
 	return{
 		save:save,
+		get:get,
 		
-	}
+	};
 }); 
 	

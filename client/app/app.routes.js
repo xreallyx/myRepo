@@ -15,7 +15,8 @@ angular.module('roberto')
    .state('list',{
        url:'/list',
        templateUrl:'app/list/list.template.html',
-       // controller: 'ListCtrl',
-   })
+       controller: 'ListCtrl',
+
+   });
    
 });

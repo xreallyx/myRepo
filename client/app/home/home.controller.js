@@ -3,17 +3,17 @@ angular.module('roberto').controller('HomeCtrl', function($scope, GeneralSrv) {
    $scope.GeneralSrv = GeneralSrv;
    
 $scope.send = function(weapon){
-    GeneralSrv.weapon(weapon
+    GeneralSrv.save(weapon
     ).then(
         function(){
-        console.log("i dati sono stati salvati sul DB");
-        alert('Your request was successful!');
+        alert('Your data has been sent!');
     }
     ).catch(         
         function(){
-        console.log("ERROR!");
+            console.log("ERROR!");
     }
     );
 	};
+
     
 });
