@@ -28,6 +28,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		
 		}).$promise;
 	};
+	
 
 
 
@@ -35,6 +36,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	return{
 		save:save,
 		get:get,
+
 		
 	};
 }); 

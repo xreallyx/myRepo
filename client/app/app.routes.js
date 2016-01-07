@@ -10,13 +10,12 @@ angular.module('roberto')
        url: '/',
        templateUrl: 'app/home/home.template.html',
        controller: 'HomeCtrl',
-
    })
    .state('list',{
-       url:'/list',
-       templateUrl:'app/list/list.template.html',
-       controller: 'ListCtrl',
+        url:'/list',
+        templateUrl:'app/list/list.template.html',
+        controller: 'ListCtrl',
+   })
 
-   });
    
 });
