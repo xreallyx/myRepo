@@ -4,11 +4,11 @@
     
         <md-input-container class="md-block">
             <label>Insert weapon's name</label>
-            <input id="vsearch" class="form-control" name="vsearch" type="text"  />
+            <input id="vsearch" class="form-control" name="vsearch" type="text" ng-model="vsearch"  />
         </md-input-container>
              
         <div layout="row">
-            <md-button class="md-primary md-raised" ng-click="fsearch()">Search</md-button>
+            <md-button class="md-primary md-raised" ng-click="fsearch(vsearch)">Search</md-button>
         </div>
   
     </md-content>

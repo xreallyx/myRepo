@@ -27,7 +27,7 @@ app.use(cookieParser());
 //serve static files
 app.use(express.static(path.join(__dirname, '..', 'client')));
 //define our API
-app.use('/api/contacts', require('./contacts'));
+app.use('/api/weapons', require('./weapons'));
 //catch 404
 app.get('/:url(api|bower_components|assets)/*', function (req, res) {
   res.send(404, 'Resource not found');

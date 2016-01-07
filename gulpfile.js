@@ -5,7 +5,7 @@ var env = require('gulp-env');
 gulp.task('default', function () {
 	env({
 	    vars: {
-	      MONGO_URI: 'mongodb://myWebSite:Lafenice_88@ds061354.mongolab.com:61354/rvwebsitedb'
+	      MONGO_URI: 'mongodb://xReallyx:Lafenice_88@ds037185.mongolab.com:37185/gdr'
 	    }
 	  });
   // Start the server at the beginning of the task 

@@ -21,8 +21,22 @@ var add = function(req,res){
 		}
 		);
 };
+
+  var get = function (req, res) {
+	Data.find().exec().then(
+		
+		function(weapon){
+		
+			return res.json(weapon);
+			// console.log(weapon);
+			
+			
+		})
+		.catch();
+  };
 //public API
 return{
 	add:add,
-}
+	get:get,
+};
 };

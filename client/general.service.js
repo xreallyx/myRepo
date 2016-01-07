@@ -5,7 +5,11 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	var Data = $resource('/api/weapons/:action/:code', {
     action: '@action',
     code: '@code',
- 
+	get: {
+		isArray: false,
+		method: 'GET',
+		params: { action: 'randomize'},
+	},
   	});
 
 
@@ -21,6 +25,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		callback = callback || angular.noop;
 		
 		return Data.get(params, function(weapon){
+		
 			console.log(weapon);
 			return callback(weapon);	
 		}, function(err){
