@@ -22,21 +22,23 @@ var add = function(req,res){
 		);
 };
 
-  var get = function (req, res) {
+  var take = function (req, res) {
 	Data.find().exec().then(
-		
-		function(weapon){
-		
-			return res.json(weapon);
-			// console.log(weapon);
+		function(weapons){
+			var weaponsObj = {};
+			for(var i=0; i<weapons.length; i++){
+				 weaponsObj[weapons[i]] = weapons[i];
+			}
 			
-			
-		})
+			return res.json(weaponsObj);
+					}
+					
+		)
 		.catch();
   };
 //public API
 return{
 	add:add,
-	get:get,
+	take:take,
 };
 };

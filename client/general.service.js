@@ -1,15 +1,14 @@
 angular.module("roberto").factory('GeneralSrv',function($resource){
 	//business logic
 
-
 	var Data = $resource('/api/weapons/:action/:code', {
-    action: '@action',
-    code: '@code',
-	get: {
+	    action: '@action',
+	    code: '@code'
+	},{
+	take: {
 		isArray: false,
-		method: 'GET',
-		params: { action: 'randomize'},
-	},
+		method: 'GET'
+		}
   	});
 
 
@@ -21,7 +20,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	};
 
 	
-	var get = function(params, callback){
+	var take = function(params, callback){
 		callback = callback || angular.noop;
 		
 		return Data.get(params, function(weapon){
@@ -40,7 +39,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	//public api
 	return{
 		save:save,
-		get:get,
+		take:take,
 
 		
 	};

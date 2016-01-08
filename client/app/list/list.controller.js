@@ -4,19 +4,14 @@ $scope.GeneralSrv = GeneralSrv;
 
 
 $scope.fsearch = function(){
-    GeneralSrv.get().then(
+    GeneralSrv.take().then(
         function(weapon){
-            console.log(weapon);
             console.log("Weapons arriving!");
-          /*  $scope.weaponName=weapon.name;
-            $scope.weaponDescription=weapon.description;
-            $scope.weaponImage=weapon.image;
-            $scope.weaponAvailability=weapon.availability;*/
-            $scope.weapon=weapon;
+            $scope.weapons=weapon;
         }
     ).catch(
         function(){
-            console.log("Impossible searching data!");
+            console.log("Impossible get weapons!");
             
         }
     )

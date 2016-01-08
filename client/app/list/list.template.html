@@ -8,13 +8,15 @@
         </md-input-container>
              
         <div layout="row">
-            <md-button class="md-primary md-raised" ng-click="fsearch(vsearch)">Search</md-button>
+            <md-button class="md-primary md-raised" >Search</md-button>
+            <label><h4> or </h4></label>
+            <md-button class="md-secondary md-raised" ng-click="fsearch()">Get all the weapons !</md-button>
         </div>
   
     </md-content>
 </div>
 
-<div layout-padding class="oggetto">
+<div layout-padding class="md-whiteframe-1dp oggetto" ng-repeat="weapon in weapons">
 <h4 ng-bind="weapon.name.toUpperCase()"></h4>
 <p ng-bind="weapon.description"></p>
 <img class="oggetto" ng-src="{{weapon.image}}" alt="{{weapon.name}}">
