@@ -36,9 +36,19 @@ var add = function(req,res){
 		)
 		.catch();
   };
+  
+  var takeOne = function(req, res){
+  	console.log("sto al server");
+  	Data.find({name: req.params.code}).exec().then(
+  		function(weapons){
+  			console.log(weapons);
+  			return res.json(weapons[0]);	
+  		}).catch();
+  };
 //public API
 return{
 	add:add,
 	take:take,
+	takeOne:takeOne,
 };
 };

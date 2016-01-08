@@ -1,20 +1,23 @@
 <p class="title">Search your weapon!</p>
-<div layout="column" ng-cloak>  
-    <md-content class="md-padding" layout="row" layout-wrap layout-align="center center">
-    
-        <md-input-container class="md-block">
-            <label>Insert weapon's name</label>
-            <input id="vsearch" class="form-control" name="vsearch" type="text" ng-model="vsearch"  />
-        </md-input-container>
-             
-        <div layout="row">
-            <md-button class="md-primary md-raised" >Search</md-button>
-            <label><h4> or </h4></label>
-            <md-button class="md-secondary md-raised" ng-click="fsearch()">Get all the weapons !</md-button>
-        </div>
-  
-    </md-content>
-</div>
+
+    <div layout="column" ng-cloak>  
+        <form novalidate name="formName" class="simple-form">
+            <md-content class="md-padding" layout="row" layout-wrap layout-align="center center">
+            
+                <md-input-container class="md-block" >
+                    <label>Insert weapon's name</label>
+                    <input id="vsearch" class="form-control" name="vsearch" type="text" ng-model="weaponName" ng-pattern="/^[A-Za-z0-9]{2,15}$/" />
+                </md-input-container>
+                     
+                <div layout="row">
+                    <md-button class="md-primary md-raised" ng-click="fsearchOne(weaponName)" ng-disabled="formName.$invalid">Search</md-button>
+                    <label><h4> or </h4></label>
+                    <md-button class="md-secondary md-raised" ng-click="fsearch()">Get all the weapons !</md-button>
+                </div>
+          
+            </md-content>
+        </form>
+    </div>
 
 <div layout-padding class="md-whiteframe-1dp oggetto" ng-repeat="weapon in weapons">
 <h4 ng-bind="weapon.name.toUpperCase()"></h4>
@@ -22,6 +25,13 @@
 <img class="oggetto" ng-src="{{weapon.image}}" alt="{{weapon.name}}">
 <p ng-bind="weapon.availability"></p>
 </div> 
+<div layout-padding class="md-whiteframe-1dp oggetto" ng-init="flag === false" ng-model="flag" ng-show="flag">
+<h4 ng-bind="weapon.name.toUpperCase()"></h4>
+<p ng-bind="weapon.description"></p>
+<img class="oggetto" ng-src="{{weapon.image}}" alt="{{weapon.name}}">
+<p ng-bind="weapon.availability"></p>
+</div> 
+
 
 
 

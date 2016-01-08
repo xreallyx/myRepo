@@ -15,7 +15,8 @@ angular.module('roberto')
         url:'/list',
         templateUrl:'app/list/list.template.html',
         controller: 'ListCtrl',
-   })
+        data:{foo: ' data bar'},
+   });
 
    
 });
