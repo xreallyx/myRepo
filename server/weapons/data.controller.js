@@ -4,7 +4,7 @@ var Data = require('./form.model');
 module.exports = function(){
 //business logic
 
-var add = function(req,res){
+var save = function(req,res){
 	var data = new Data(req.body);
 	console.log(data);
 	data.save().then(
@@ -34,21 +34,36 @@ var add = function(req,res){
 					}
 					
 		)
-		.catch();
+		.catch(function(err){
+  				throw err;
+  			});
   };
   
   var takeOne = function(req, res){
-  	console.log("sto al server");
+  	//console.log("sto al server");
   	Data.find({name: req.params.code}).exec().then(
   		function(weapons){
   			console.log(weapons);
   			return res.json(weapons[0]);	
   		}).catch();
   };
+  
+  var remove = function(req, res){
+  	console.log("sto nel server");
+  	Data.find({name: req.params.code}).exec().then(
+  		function(weapon){
+  			return weapon.remove();
+			res.status(200).send("Data removed");
+  		}).then(
+  			function(){
+  				console.log("Weapon removed from DB!");
+  			}).catch();
+  };
 //public API
 return{
-	add:add,
+	save:save,
 	take:take,
 	takeOne:takeOne,
+	remove:remove,
 };
 };

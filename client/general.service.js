@@ -26,7 +26,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	
 	var take = function(params, callback){
 		callback = callback || angular.noop;
-		return Data.get(params, function(weapon){
+		return Data.take(params, function(weapon){
 		
 			return callback(weapon);	
 		}, function(err){
@@ -38,12 +38,23 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 	var takeOne = function(params, callback){
 		callback = callback || angular.noop;
 		
-		return Data.get(params, function(weapon){
-		console.log("sto al service")
+		return Data.takeOne(params, function(weapon){
+			//console.log("sto nel service");
 			return callback(weapon);	
 		}, function(err){
 			return callback(err);	
 		
+		}).$promise;
+	};
+	
+	var remove = function(params, callback){
+		callback = callback || angular.noop;
+		
+		return Data.remove(params, function(weapon){
+			console.log("sto nel service");
+			return callback();
+		},function (err){
+			return callback(err);
 		}).$promise;
 	};
 	
@@ -55,6 +66,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		save:save,
 		take:take,
 		takeOne:takeOne,
+		remove:remove,
 		
 	};
 }); 

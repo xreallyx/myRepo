@@ -14,12 +14,12 @@
 .title{
     font-size:2em;
     text-align:center;
+    font-family: 'Bangers', cursive;    
 }
 .oggetto{
     display:block;
     max-width:200px;
     margin:20px auto;     
     text-align:center;
-    font-family: 'Indie Flower', cursive;
     font-size:20px;
 }

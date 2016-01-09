@@ -21,8 +21,7 @@ $scope.fsearchOne = function(weaponName){
  
     GeneralSrv.takeOne({code: weaponName}).then(
         function(weapon){
-            console.log(weapon);
-            console.log("Weapon nominated is arriving!");
+            //console.log("Weapon nominated is arriving!");
             $scope.weapon=weapon;
             var flag = true;
             $scope.flag=flag;
@@ -31,5 +30,14 @@ $scope.fsearchOne = function(weaponName){
                console.log("Weapon nominated not arrived!"); 
             }
         );
+};
+$scope.remove = function(weaponName){
+    GeneralSrv.remove({code: weaponName}).then(
+        function(){
+            console.log("Weapon deleted!");
+        }).catch(
+            function(){
+                console.log("Can't remove weapon!");
+            });
 };
 });
