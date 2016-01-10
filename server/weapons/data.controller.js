@@ -1,4 +1,3 @@
-var mongoose = require('mongoose');
 var Data = require('./form.model');
 
 module.exports = function(){
@@ -8,10 +7,11 @@ module.exports = function(){
 var empty = {name:'fake'};
 
 var save = function(req,res){
+	
 	var data = new Data(req.body);
-	//console.log(data);
-	data.save(
-		).then(
+	var id = req.body._id || data;
+	Data.update({_id: id}, req.body, {upsert: true})
+	.then(
 		function(){
 			res.status(200).send("Data saved!");
 		}).catch(
@@ -58,28 +58,18 @@ var save = function(req,res){
   	Data.findOneAndRemove({name: req.params.code}).exec(
   		).then(
   		function(weapon){
-  		//	console.log(weapon);
+  			res.status(200).send("Data removed!");
   		}).catch(function(err){
   				throw err;
   				});
   };
   
-  var update = function(req, res){
-  	  console.log("sto nel servee");
-	  Data.find({name: req.params.code}).exec(
-	  	).then(
-	  		function(weapon){
-	  			// console.log(weapon);
-	  		
-	  		}).catch();	
-
-  };
 //public API
 	return{
 		save:save,
 		take:take,
 		takeOne:takeOne,
 		remove:remove,
-		update:update,
+	
 	};
 };

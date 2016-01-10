@@ -13,6 +13,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		isArray: false,
 		method: 'GET'
 	},
+
   	});
 
 
@@ -39,7 +40,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		callback = callback || angular.noop;
 		
 		return Data.takeOne(params, function(weapon){
-			//console.log("i'm in the service");
+	
 			return callback(weapon);	
 		}, function(err){
 			return callback(err);	
@@ -66,15 +67,6 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		});
 	};
 	
-	var update = function(params,callback){
-		callback = callback || angular.noop;
-		console.log(params);
-		return Data.update(params, function(weapon){
-			return callback();
-		},function (err){
-			return callback(err);
-		}).$promise;
-	};
 	
 	
 
@@ -85,7 +77,6 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		takeOne:takeOne,
 		remove:remove,
 		move:move,
-		update:update,
 		
 	};
 }); 

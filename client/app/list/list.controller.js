@@ -73,16 +73,4 @@ $scope.close = function(){
     });
 };
 
-$scope.update = function(weaponName){
-    // console.log(weapon);
-    GeneralSrv.update(weaponName).then(
-        function(weapon){
-            console.log("Weapon updated!");
-            $scope.weapon=weapon;
-        }).catch(
-            function(){
-                console.log("Impossible updated weapon");
-            });
-};
-
 });
