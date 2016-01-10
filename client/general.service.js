@@ -58,8 +58,25 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		}).$promise;
 	};
 	
-
-
+	var move = function(){
+		//console.log("sto nella move");
+		$(document).ready(function(){
+        	$("#toast").animate({right: '150'},1000);
+        	
+		});
+	};
+	
+	var update = function(params,callback){
+		callback = callback || angular.noop;
+		console.log(params);
+		return Data.update(params, function(weapon){
+			return callback();
+		},function (err){
+			return callback(err);
+		}).$promise;
+	};
+	
+	
 
 	//public api
 	return{
@@ -67,6 +84,8 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		take:take,
 		takeOne:takeOne,
 		remove:remove,
+		move:move,
+		update:update,
 		
 	};
 }); 

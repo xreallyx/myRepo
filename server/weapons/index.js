@@ -6,6 +6,7 @@ router.post('/', controller.save);
 router.get('/', controller.take);
 router.get('/:code', controller.takeOne);
 router.delete('/:code',controller.remove);
+router.put('/:code', controller.update);
 
 
 module.exports = router;
