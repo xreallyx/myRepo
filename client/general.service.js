@@ -39,7 +39,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		callback = callback || angular.noop;
 		
 		return Data.takeOne(params, function(weapon){
-			//console.log("sto nel service");
+			//console.log("i'm in the service");
 			return callback(weapon);	
 		}, function(err){
 			return callback(err);	
@@ -51,7 +51,7 @@ angular.module("roberto").factory('GeneralSrv',function($resource){
 		callback = callback || angular.noop;
 		
 		return Data.remove(params, function(weapon){
-			console.log("sto nel service");
+		
 			return callback();
 		},function (err){
 			return callback(err);

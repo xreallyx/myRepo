@@ -1,21 +1,21 @@
 var mongoose = require('mongoose');
 var Data = require('./form.model');
 
+var empty = {name:'fake'};
+
 module.exports = function(){
 //business logic
 
 var save = function(req,res){
 	var data = new Data(req.body);
 	console.log(data);
-	data.save().then(
+	data.save(
+		).then(
 		function(){
-			console.log("I'm inside then in add");
 			res.status(200).send("Data saved!");
-
-
 		}).catch(
 		function(err){
-			console.log("entro qui");
+		
 			console.log(err);
 			res.status(500).send("Data not saved!");
 		}
@@ -23,16 +23,15 @@ var save = function(req,res){
 };
 
   var take = function (req, res) {
-	Data.find().exec().then(
+	Data.find().exec(
+		).then(
 		function(weapons){
 			var weaponsObj = {};
 			for(var i=0; i<weapons.length; i++){
 				 weaponsObj[weapons[i]] = weapons[i];
 			}
-			
-			return res.json(weaponsObj);
+			res.json(weaponsObj);
 					}
-					
 		)
 		.catch(function(err){
   				throw err;
@@ -40,24 +39,31 @@ var save = function(req,res){
   };
   
   var takeOne = function(req, res){
-  	//console.log("sto al server");
-  	Data.find({name: req.params.code}).exec().then(
+  	//console.log("I'm in the server");
+  	Data.find({name: req.params.code}).exec(
+  		).then(
   		function(weapons){
-  			console.log(weapons);
-  			return res.json(weapons[0]);	
-  		}).catch();
+  			console.log(weapons[0]);
+  			if(!weapons[0]){console.log(req.params.code + " is not in your DB");
+  				res.json(empty);
+  			}else{
+  			res.json(weapons[0]);}	
+  		}).catch(function(err){
+  				throw err;
+  			});
   };
   
   var remove = function(req, res){
   	console.log("sto nel server");
-  	Data.find({name: req.params.code}).exec().then(
+
+  	Data.findOneAndRemove({name: req.params.code}).exec(
+  		).then(
   		function(weapon){
-  			return weapon.remove();
-			res.status(200).send("Data removed");
-  		}).then(
-  			function(){
-  				console.log("Weapon removed from DB!");
-  			}).catch();
+  			console.log(weapon);
+			
+  		}).catch(function(err){
+  				throw err;
+  			});
   };
 //public API
 return{
